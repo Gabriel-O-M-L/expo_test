@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Text, Pressable, View } from 'react-native';
+const fs = require('fs');
 
 export default function RedButton() {
     const [pressed, setPressed] = useState(false);
 
     return (
         <View className="bg-gray-50 flex justify-center items-center h-full w-full">
+            <Text className="bottom-20">Pergunta</Text>
             <Pressable
                 className={`z-10 ${pressed ? 'bg-red-700 top-2' : 'bg-red-500'} p-4 rounded-full w-[80px] h-[80px] flex justify-center items-center`}
                 style={{ transform: [{ rotateX: '45deg' }] }}
@@ -19,6 +21,7 @@ export default function RedButton() {
                 <Text className="text-red-500 text-lg font-bold p-11">Option 1!</Text>
                 <Text className="text-red-500 text-lg font-bold p-11">Option 2!</Text>
             </View>
+            <Text className="top-20">Pass</Text>
         </View>
     );
 }
